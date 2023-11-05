@@ -1,0 +1,15 @@
+[Unit]
+Description=Record Player with Sportify
+Wants=sound.target
+After=sound.target
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+WorkingDirectory=/home/joseph/spotifyRecordPlayer/
+ExecStart=/home/joseph/spotifyRecordPlayer/Player.py
+Restart=always
+RestartSec=12
+
+[Install]
+WantedBy=default.target
